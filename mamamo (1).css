@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background: #f5f3ff;
+    color: #333;
+}
+
+/* Container to hold all boxes in a row */
+.boxes-container {
+  display: flex;            
+  justify-content: center;  
+  gap: 30px;                
+  flex-wrap: wrap;          
+  padding: 20px;
+}
+
+/* Individual box style (glass effect) */
+.content-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  color: dimgray;
+  max-width: 300px;   
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Image inside box */
+.content-box img {
+  width: 100%;            /* full width of the box */
+  height: 180px;          /* fixed height */
+  object-fit: cover;      /* crop nicely if needed */
+  border-radius: 10px;    
+  margin-bottom: 15px;
+}
+
+/* Optional hover effect */
+.content-box:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.05);
+}
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    font-family: 'Playfair Display' , san-serif;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 0px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+}
+.logo {
+    color: #6c5cff;
+    font-weight: 700;
+    margin: 20px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: rebeccapurple;
+    font-weight: 500;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  margin: 0;
+  
+  background: radial-gradient(circle at top left, #e8d4ff, #dcd0ff, mediumpurple);
+  background-size: 200% 200%;
+  animation: glowBG 10s ease infinite alternate;
+}
+
+@keyframes glowBG {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.home {
+    text-align: center;
+    padding: 100px 20px;
+    
+}
+
+.profile {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-bottom: 20px;
+}
+
+.home h1 {
+    font-size: 40px;
+    color: #6c5cff;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #6c5cff;
+}
+
+
+/* CARD */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ACHIEVEMENTS */
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.achievement {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.achievement img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+/* SKILLS */
+
+.skills {
+    max-width: 600px;
+    margin: auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.bar {
+    background: #ddd;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.bar div {
+    height: 10px;
+    border-radius: 10px;
+}
+
+.html {
+    width: 90%;
+    background: #6c5cff;
+}
+
+.css {
+    width: 80%;
+    background: #9a8cff;
+}
+
+.comm {
+    width: 85%;
+    background: #b8a6ff;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #c9b6ff;
+    color: white;
+    margin-top: 40px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px) {
+    
+    header {
+        flex-direction: column;
+    }
+    
+    nav {
+        margin-top: 10px;
+    }
+    
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+

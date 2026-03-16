@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="hays.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="login-container">
+  <form class="login-form">
+    <h2>Login</h2>
+
+    <!-- Error message -->
+    <p class="error-message" id="errorMsg"></p>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter your username" required>
+    
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter your password" required>
+    
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<script>
+const form = document.querySelector('.login-form');
+const errorMsg = document.getElementById('errorMsg');
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  // Example demo credentials
+  if(username === "kc" && password === "mamamo"){
+    window.location.href = "index.html"; // redirect sa home page
+  } else {
+    errorMsg.textContent = "Invalid username or password"; // display inline
+    errorMsg.style.display = "block";
+  }
+});
+</script>
+
+</body>
+</html>
